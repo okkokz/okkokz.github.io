@@ -10,6 +10,8 @@
 body { background: #fff; }
 .button, .button-light { background: #25d366; color: #fff; }
 .button:hover, .button-light:hover { background: #1daf58; color: #fff; }
+.language-switch { margin-left: auto; margin-right: 12px; padding: 9px 12px; border: 1px solid #a7c7e4; border-radius: 20px; background: #fff; color: #0f5f9e; font: 800 11px/1 Manrope, Arial, sans-serif; cursor: pointer; }
+.language-switch:hover { border-color: #166fc1; background: #eef7ff; }
 .hero h1 em, .brand span, .eyebrow, .text-link:hover { color: #166fc1; }
 .sun { background: #d7ecff; }
 .paper-front b { background: #166fc1; }
@@ -36,3 +38,5 @@ body { background: #fff; }
 .order { background: #0f5f9e; }
 .order .eyebrow { color: #d9efff; }
 footer { background: #fff; }
+
+@media (max-width: 820px) { .language-switch { margin-left: auto; margin-right: 8px; } }
