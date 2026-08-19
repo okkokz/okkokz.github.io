@@ -5,8 +5,9 @@ button?.addEventListener('click', () => {
   button.setAttribute('aria-expanded', String(isOpen));
   button.textContent = isOpen ? '×' : '☰';
 });
-nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+nav?.addEventListener('click', event => {
+  if (!event.target.closest('a')) return;
   nav.classList.remove('open');
   button?.setAttribute('aria-expanded', 'false');
   if (button) button.textContent = '☰';
-}));
+});
