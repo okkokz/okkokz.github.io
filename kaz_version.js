@@ -36,11 +36,6 @@ function setLanguage(language) {
   const isKazakh = language === 'kk';
   document.documentElement.lang = isKazakh ? 'kk' : 'ru';
   document.title = isKazakh ? 'Ғылыми және әдістемелік материалдар' : 'Научные и методические материалы';
-  document.querySelector('.nav')?.setAttribute('aria-label', isKazakh ? 'Негізгі мәзір' : 'Главное меню');
-  document.querySelector('.menu-button')?.setAttribute('aria-label', isKazakh ? 'Мәзірді ашу' : 'Открыть меню');
-  document.querySelector('.button-small')?.setAttribute('href', isKazakh
-    ? 'https://wa.me/87058037275?text=Сәлеметсіз%20бе!%20Қызмет%20құнын%20білгім%20келеді.'
-    : 'https://wa.me/87058037275?text=Здравствуйте!%20Хочу%20узнать%20стоимость%20услуги.');
   Object.keys(kazakhContent).forEach(selector => {
     const element = document.querySelector(selector);
     if (element) element.innerHTML = isKazakh ? kazakhContent[selector] : russianContent.get(selector);
